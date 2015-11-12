@@ -1,0 +1,116 @@
+@mixin box-shadow($x_offset: 0, $y_offset: 4px, $blur: 2px, $spread: 0, $color: rgba(0, 0, 0, 0.03)) {
+    -moz-box-shadow: $x_offset $y_offset $blur $spread $color;
+    -webkit-box-shadow: $x_offset $y_offset $blur $spread $color;
+    box-shadow: $x_offset $y_offset $blur $spread $color;
+}
+
+@mixin box-shadow-inset($x_offset: 0, $y_offset: 4px, $blur: 2px, $spread: 0, $color: rgba(0, 0, 0, 0.03)) {
+    -webkit-box-shadow: inset $x_offset $y_offset $blur $spread $color;
+    -moz-box-shadow: inset $x_offset $y_offset $blur $spread $color;
+    box-shadow: inset $x_offset $y_offset $blur $spread $color;
+}
+
+@mixin button-gradiant($position, $color_start, $color_stop, $percent_start, $percent_stop) {
+    background-color: $color_start;
+    background-image: linear-gradient($position, $color_start $percent_start, $color_stop $percent_stop);
+    background-image: -o-linear-gradient($position, $color_start $percent_start, $color_stop $percent_stop);
+    background-image: -moz-linear-gradient($position, $color_start $percent_start, $color_stop $percent_stop);
+    background-image: -webkit-linear-gradient($position, $color_start $percent_start, $color_stop $percent_stop);
+    background-image: -ms-linear-gradient($position, $color_start $percent_start, $color_stop $percent_stop);
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop($percent_start / 100%, $color_start),
+            color-stop($percent_stop / 100%, $color_stop)
+    );
+}
+
+@mixin border-radius($radius: 20px) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    background: #EEE;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #6F7175;
+    > header {
+        width: 1002px;
+        height: 119px;
+        margin: auto;
+        position: relative;
+        img {
+            position: absolute;
+            top: 20px;
+            left: 85px;
+        }
+    }
+}
+
+input[type = 'search'] {
+    width: 293px;
+    height: 22px;
+    border: 1px solid #D4DADD;
+    padding: 10px;
+    background: url(../images/search.png) 281px 11px no-repeat #FBFBFC;
+    @include border-radius(5px);
+    @include box-shadow-inset;
+    -webkit-appearance: textfield;
+    box-sizing: content-box;
+    &:focus {
+        @include box-shadow-inset(0, 0, 4px, 2px, #E7F0D8);
+    }
+    &::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+    }
+}
+
+
+footer {
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #FFF;
+    margin: 18px auto;
+    form {
+        display: inline;
+        select {
+            width: 184px;
+        }
+    }
+}
+@mixin slim-button($width: 114px) {
+    margin: 0;
+    width: $width;
+    height: 36px;
+    border: 1px solid #79A845;
+    @include border-radius(5px);
+    background: url(../images/gradients.png) 0 -226px repeat-x;
+    font-weight: bold;
+    color: #FFF;
+    text-shadow: 0 -1px 1px rgba(black, 0.1);
+    cursor: pointer;
+    @include button-gradiant(bottom, #8FE89B, #8FE89B, 54%, 86%);
+    &:hover {
+        @include button-gradiant(bottom, #8FE89B, #8FE89B, 54%, 86%);
+    }
+}
+h1 {
+color: #f47321;
+font-size: 20px;
+font-weight: bold;
+width: 900px;
+padding: 46px 0 46px 0px;
+margin-left: 30px;
+border-bottom: 1px solid #ECECEC;
+}
+

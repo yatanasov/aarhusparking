@@ -1,0 +1,390 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 97%%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 56, ../sass/screen.scss */
+#content {
+  float: left;
+  height: 70%;
+  width: 100%;
+}
+
+/* line 62, ../sass/screen.scss */
+#menu {
+  position: absolute;
+  float: left;
+  height: 70%;
+  width: 20%;
+  z-index: 0;
+}
+
+/* line 70, ../sass/screen.scss */
+#footer {
+  clear: left;
+  height: 15%;
+}
+
+/* line 75, ../sass/screen.scss */
+#header {
+  height: 10%;
+  z-index: 1;
+}
+
+/* line 80, ../sass/screen.scss */
+body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+/* line 88, ../sass/screen.scss */
+body > div {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 3px solid red;
+  border-radius: 20px;
+  box-bozing: border-box;
+  padding: 10px;
+}
+
+/* line 99, ../sass/screen.scss */
+input {
+  background-color: white;
+  border: 2px solid red;
+  border-radius: 15px;
+  padding: 7px;
+}
+
+/* line 106, ../sass/screen.scss */
+input:hover {
+  background-color: #fafaf7;
+}
+
+/* line 111, ../sass/screen.scss */
+input[type='button'] {
+  margin: 0;
+  width: 114px;
+  height: 36px;
+  border: 1px solid #79A845;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: url(../images/gradients.png) 0 -226px repeat-x;
+  font-weight: bold;
+  color: #FFF;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  background-color: #8FE89B;
+  background-image: linear-gradient(bottom, #8FE89B 54%, #8FE89B 86%);
+  background-image: -o-linear-gradient(bottom, #8FE89B 54%, #8FE89B 86%);
+  background-image: -moz-linear-gradient(bottom, #8FE89B 54%, #8FE89B 86%);
+  background-image: -webkit-linear-gradient(bottom, #8FE89B 54%, #8FE89B 86%);
+  background-image: -ms-linear-gradient(bottom, #8FE89B 54%, #8FE89B 86%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.54, #8FE89B), color-stop(0.86, #8FE89B));
+}
+/* line 35, ../sass/screen.scss */
+input[type='button']:hover {
+  background-color: #8FE89B;
+  background-image: linear-gradient(bottom, #8FE89B 54%, #8FE89B 86%);
+  background-image: -o-linear-gradient(bottom, #8FE89B 54%, #8FE89B 86%);
+  background-image: -moz-linear-gradient(bottom, #8FE89B 54%, #8FE89B 86%);
+  background-image: -webkit-linear-gradient(bottom, #8FE89B 54%, #8FE89B 86%);
+  background-image: -ms-linear-gradient(bottom, #8FE89B 54%, #8FE89B 86%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.54, #8FE89B), color-stop(0.86, #8FE89B));
+}
+
+/* line 117, ../sass/screen.scss */
+input[type='search'] {
+  width: 50%;
+  height: 10%;
+  margin-left: 20%;
+  border: 1px solid #D4DADD;
+  padding: 10px;
+  background: url(../images/search.png) -10px no-repeat #FBFBFC;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 0 4px 2px 0 rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: inset 0 4px 2px 0 rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0 4px 2px 0 rgba(0, 0, 0, 0.03);
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+/* line 128, ../sass/screen.scss */
+input[type='search']:focus {
+  -webkit-box-shadow: inset 0 0 4px 2px #E7F0D8;
+  -moz-box-shadow: inset 0 0 4px 2px #E7F0D8;
+  box-shadow: inset 0 0 4px 2px #E7F0D8;
+}
+/* line 131, ../sass/screen.scss */
+input[type='search']::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* line 136, ../sass/screen.scss */
+.button-link {
+  padding: 10px 15px;
+  color: #4479BA;
+  border-radius: 4px;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-user-select: none;
+}
+
+/* line 145, ../sass/screen.scss */
+#map {
+  width: 100%;
+  height: 400px;
+  margin-top: 5%;
+}
+
+/* line 150, ../sass/screen.scss */
+.details {
+  margin-top: 5%;
+  width: 35%;
+  display: inline-block;
+}
+
+/* line 156, ../sass/screen.scss */
+.panel {
+  position: absolute;
+  margin-top: 10%;
+  height: 20%;
+  left: 1%;
+  width: 95%;
+  margin-bottom: 1%;
+  padding: 3%;
+  border: 1px solid #000000;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+/* line 167, ../sass/screen.scss */
+#btn_reserve {
+  visibility: visible;
+  position: absolute;
+  margin-top: 8%;
+  margin-left: 15%;
+}
+
+/* --------------------------------- NAVIGATION  ----------------------------------------------*/
+/* Navigation Menu - Background */
+/* line 176, ../sass/screen.scss */
+.navigation {
+  /* critical sizing and position styles */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  /* non-critical appearance styles */
+  list-style: none;
+  background: #111;
+}
+
+/* Navigation Menu - List items */
+/* line 193, ../sass/screen.scss */
+.nav-item {
+  /* non-critical appearance styles */
+  width: 200px;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #000;
+}
+
+/* line 200, ../sass/screen.scss */
+.nav-item a {
+  /* non-critical appearance styles */
+  display: block;
+  padding: 1em;
+  background: linear-gradient(135deg, transparent 0%, rgba(0, 0, 0, 0.65) 100%);
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.2s, background 0.5s;
+}
+
+/* line 211, ../sass/screen.scss */
+.nav-item a:hover {
+  color: #c74438;
+  background: linear-gradient(135deg, transparent 0%, rgba(75, 20, 20, 0.65) 100%);
+}
+
+/* Site Wrapper - Everything that isn't navigation */
+/* line 217, ../sass/screen.scss */
+.site-wrap {
+  /* Critical position and size styles */
+  overflow-x: hidden;
+  min-height: 100%;
+  min-width: 100%;
+  background-color: white;
+  /* Needs a background or else the nav will show through */
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+  /* non-critical apperance styles */
+  padding: 5px;
+  background-image: linear-gradient(135deg, #feffff 0%, #ddf1f9 35%, #a0d8ef 100%);
+  background-size: 200%;
+}
+
+/* Nav Trigger */
+/* line 236, ../sass/screen.scss */
+.nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* line 242, ../sass/screen.scss */
+label[for="nav-trigger"] {
+  /* critical positioning styles */
+  position: fixed;
+  left: 15px;
+  top: 15px;
+  z-index: 2;
+  /* non-critical apperance styles */
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background-size: contain;
+}
+
+/* Make the Magic Happen */
+/* line 257, ../sass/screen.scss */
+.nav-trigger + label, .site-wrap {
+  transition: left 0.2s;
+}
+
+/* line 261, ../sass/screen.scss */
+.nav-trigger:checked + label {
+  left: 215px;
+}
+
+/* line 265, ../sass/screen.scss */
+.nav-trigger:checked ~ .site-wrap {
+  left: 200px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* line 270, ../sass/screen.scss */
+body {
+  /* Without this, the body has excess horizontal scroll when the menu is open */
+  overflow-x: hidden;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* Additional non-critical styles */
+/* line 278, ../sass/screen.scss */
+h1, h3, p {
+  max-width: 600px;
+  margin: 0 auto 1em;
+}
+
+/* line 283, ../sass/screen.scss */
+code {
+  padding: 2px;
+  background: #ddd;
+}
+
+/* Micro reset */
+/* line 289, ../sass/screen.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 290, ../sass/screen.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* --------------------------------- END NAVIGATION  ----------------------------------------------*/

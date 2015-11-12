@@ -1,0 +1,15 @@
+http://www.sitepoint.com/pure-css-off-screen-navigation-menu/
+
+http://stackoverflow.com/questions/29463131/mapping-multiple-locations-with-google-maps-javascript-api-v3-and-geocoding-api
+
+http://stackoverflow.com/questions/29862490/no-access-control-allow-origin-header-on-getjson-request
+
+http://www.odaa.dk/dataset/parkeringshuse-i-aarhus/resource/2a82a145-0195-4081-a13c-b0e587e9b89c
+
+https://itunes.apple.com/us/app/parking-panda-on-demand-parking/id550285323?mt=8
+
+http://userpages.umbc.edu/~srieng1/0789723107.pdf
+
+https://www.google.com/fonts#UsePlace:use/Collection:PT+Sans
+
+http://schock.net/articles/2013/02/05/how-jsonp-really-works-examples/

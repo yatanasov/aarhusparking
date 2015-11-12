@@ -1,0 +1,308 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+
+@mixin border-radius($radius: 20px) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+@mixin box-shadow-inset($x_offset: 0, $y_offset: 4px, $blur: 2px, $spread: 0, $color: rgba(0, 0, 0, 0.03)) {
+    -webkit-box-shadow: inset $x_offset $y_offset $blur $spread $color;
+    -moz-box-shadow: inset $x_offset $y_offset $blur $spread $color;
+    box-shadow: inset $x_offset $y_offset $blur $spread $color;
+}
+
+@mixin button($width: 114px) {
+    margin: 0;
+    width: $width;
+    height: 36px;
+    border: 1px solid #79A845;
+    @include border-radius(5px);
+    background: url(../images/gradients.png) 0 -226px repeat-x;
+    font-weight: bold;
+    color: #FFF;
+    text-shadow: 0 -1px 1px rgba(black, 0.1);
+    cursor: pointer;
+    @include button-gradiant(bottom, #8CE168, #8CE168, 54%, 86%);
+    &:hover {
+        @include button-gradiant(bottom, #B5DC89, #B5DC89, 54%, 86%);
+    }
+}
+
+@mixin button-gradiant($position, $color_start, $color_stop, $percent_start, $percent_stop) {
+    background-color: $color_start;
+    background-image: linear-gradient($position, $color_start $percent_start, $color_stop $percent_stop);
+    background-image: -o-linear-gradient($position, $color_start $percent_start, $color_stop $percent_stop);
+    background-image: -moz-linear-gradient($position, $color_start $percent_start, $color_stop $percent_stop);
+    background-image: -webkit-linear-gradient($position, $color_start $percent_start, $color_stop $percent_stop);
+    background-image: -ms-linear-gradient($position, $color_start $percent_start, $color_stop $percent_stop);
+    background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop($percent_start / 100%, $color_start),
+            color-stop($percent_stop / 100%, $color_stop)
+    );
+}
+
+#content {
+    float: left;
+    height: 70%;
+    width: 100%;
+   }
+
+   #menu {
+    position:absolute;
+    float: left;
+    height: 70%;
+    width: 20%;
+    z-index:0;
+   }
+
+   #footer {
+    clear: left;
+    height: 15%;
+   }
+
+   #header {
+    height: 10%;
+    z-index: 1;
+   }
+
+   body {
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+   }
+
+   body > div {
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    border: 3px solid #D8D8D8;
+    border-radius: 20px;
+    box-bozing: border-box;
+    padding: 10px;
+   }
+
+   input {
+    background-color: rgba(255, 255, 255, 1);
+    border: 2px solid red;
+    border-radius: 15px;
+    padding: 7px;
+   }
+
+   input:hover {
+    background-color: rgba(250, 250, 247, 1);
+   }
+   
+
+input[type='button']
+{
+@include button;
+}
+
+
+input[type = 'search'] {
+    width: 48%;
+    height: 10%;
+    margin-left: 20%;
+    border: 1px solid #D4DADD;
+    padding: 10px;
+    background: url(../images/s.png) 95% no-repeat #FBFBFC;
+    @include border-radius(5px);
+    @include box-shadow-inset;
+    -webkit-appearance: textfield;
+    box-sizing: content-box;
+    &:focus {
+        @include box-shadow-inset(0, 0, 4px, 2px, #E7F0D8);
+    }
+    &::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+    }
+}
+
+.button-link {
+    padding: 10px 15px;
+    color: #000000;
+    text-decoration: blink;
+    font-size: 130%;
+    font-weight: bolder;
+}
+
+
+#map{
+    width: 100%;
+    height: 375px;
+    margin-top: 5%;
+}
+.details{
+    margin-top: 3%;
+    width: 100%;
+    display: inline-block;
+}
+
+.panel{
+    position: absolute;
+    margin-top: 10%;
+   display: inline-block;
+    background-color: white;
+    left: 2%;
+    width:95%;
+    margin-bottom: 1%;
+    padding: 3%;
+    border: 1px solid #000000;
+    @include border-radius(5px);
+}
+#btn_reserve{
+    visibility: visible;
+    position: absolute;
+    margin-top: 8%;
+    margin-left: 55%;
+}
+#lbl_free{
+ font-weight: bold;
+}
+#lbl_name,#lbl_price,#lbl_free,#lbl_total{
+font-size:95%;
+}
+
+/* --------------------------------- NAVIGATION  ----------------------------------------------*/
+/* Navigation Menu - Background */
+.navigation {
+  /* critical sizing and position styles */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  
+  /* non-critical appearance styles */
+  list-style: none;
+  background: #D2D2D2;
+}
+
+/* Navigation Menu - List items */
+.nav-item {
+    width: 200px;
+    border-top: 1px solid #7D7979;
+    border-bottom: 1px solid #7D7979;
+}
+
+.nav-item a {
+  /* non-critical appearance styles */
+  display: block;
+  padding: 1em;
+  background: #8CE168;
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.2s, background 0.5s;
+}
+
+.nav-item a:hover {
+  color: #fff;
+  background: #777777;
+}
+
+/* Site Wrapper - Everything that isn't navigation */
+.site-wrap {
+  /* Critical position and size styles */
+  overflow-x: hidden;
+  min-height: 100%;
+  min-width: 100%;
+  background-color: white; /* Needs a background or else the nav will show through */
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+  
+  /* non-critical apperance styles */
+  background-image: linear-gradient(135deg, #FFFFFF 0%, #D1D1D1 35%, #FFFFFF 100%);
+  background-size: 200%;
+}
+
+/* Nav Trigger */
+.nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+  /* critical positioning styles */
+  position: fixed;
+  left: 15px; top: 15px;
+  z-index: 2;
+  
+  /* non-critical apperance styles */
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background-size: contain;
+}
+
+/* Make the Magic Happen */
+.nav-trigger + label, .site-wrap {
+  transition: left 0.2s;
+}
+
+.nav-trigger:checked + label {
+  left: 215px;
+}
+
+.nav-trigger:checked ~ .site-wrap {
+  left: 200px;
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
+
+body {
+    /* Without this, the body has excess horizontal scroll when the menu is open */
+  overflow-x: hidden;
+font-family: 'PT Sans', sans-serif;
+}
+
+/* Additional non-critical styles */
+
+h1, h3, p {
+  max-width: 600px;
+  margin: 0 auto 1em;
+}
+
+code {
+    padding: 2px;
+    background: #ddd;
+}
+
+img.inline {
+    display: inline;
+    border: none;
+    box-shadow: none;
+    padding: 0px 0px;
+    margin: -10%;
+    margin-right: 5%;
+}
+/* Micro reset */
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+html, body { height: 100%; width: 100%; font-family: 'PT Sans', sans-serif; }
+
+/* --------------------------------- END NAVIGATION  ----------------------------------------------*/
+#naptha_container0932014_0707{
+display:none;
+}

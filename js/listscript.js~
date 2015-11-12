@@ -1,0 +1,134 @@
+//GOOGLE MAPS INTEGRATION
+var geocoder;
+var map;
+var bounds = new google.maps.LatLngBounds();
+var locations = [];
+
+
+function processJSON(json) {
+  var parkings = json.result.records;
+
+  for (i = 0; i < parkings.length; i++) {
+
+    var address = parkings[i].garageCode.toString();
+    var left_spaces = parkings[i].totalSpaces - parkings[i].vehicleCount;
+    var left = left_spaces.toString();
+    var total = parkings[i].totalSpaces.toString();
+    //SHOW ONLY PARKINGS WITH AVAILABLE SPACES
+    if (left_spaces > 0) {
+      locations.push([left, address, total]);
+    }
+  }
+};
+
+function initialize() {
+
+  // locations ARRAY NOW CONTAINS ARRAYS THAT LOOK LIKE THIS ['BRUUNS','25','232']
+  // NOW WE SETUP THE MAP 
+  map = new google.maps.Map(
+    document.getElementById("map"), {
+    center: new google.maps.LatLng(3, -12),
+    zoom: 1,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+  var options = {
+    disableDoubleClickZoom: false,
+    draggable: false,
+    scrollwheel: false,
+    panControl: false
+};
+
+this.map = new google.maps.Map(document.getElementById('map'), options);
+  geocoder = new google.maps.Geocoder();
+
+
+  //THERE IS A SERIOUS PROBLEM WITH THE NAMINGS IN THE ODAA API:
+  //THE FOLLOWING PARKING NAMES CANNOT BE FOUND IN GOOGLE:
+
+  //URBAN LEVEL 1
+  //URBAN LEVEL 2+3 - GOOGLE SHOWS THEM IN UNITED STATES
+  //BUSGADEHUSET
+  //SCANDCENTER
+  //NEWBUSGADEHUSET
+  //SALLING - SHOWN IN AUSTRIA
+  //MAGASIN - SHOWN IN GERMANY
+  // BRUUNS - SHOWN  IN VIBORG
+  // KALKVAERKSVEJ - SHOWN IN MØNSTED
+
+  for (i = 0; i < locations.length; i++) {
+    geocodeAddress(locations, i);
+  }
+  document.getElementById("btn_reserve").style.visibility = "hidden";
+  document.getElementById("panel").style.visibility = "hidden";
+
+function geocodeAddress(locations, i) {
+  var title = locations[i][0];
+  var address = locations[i][1];
+  var url = locations[i][2];
+  geocoder.geocode({
+    'address': locations[i][1]
+  },
+
+  function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      var marker = new google.maps.Marker({
+        icon: 'http://maps.google.com/mapfiles/ms/icons/blue.png',
+        map: map,
+        position: results[0].geometry.location,
+        title: title,
+        animation: google.maps.Animation.DROP,
+        address: address,
+        url: url
+      })
+      infoWindow(marker, map, title, address, url);
+      bounds.extend(marker.getPosition());
+      map.fitBounds(bounds);
+    } else {
+      console.log("geocode of " + address + " failed:" + status);
+    }
+  });
+}
+
+function infoWindow(marker, map, free, address, url) {
+  google.maps.event.addListener(marker, 'click', function() {
+    document.getElementById("panel").style.visibility = "visible";
+    document.getElementById("lbl_name").innerHTML = "Name: " + address;
+    document.getElementById("lbl_free").innerHTML = "<h3> FREE SPACES: " + free + "</h3>"
+    document.getElementById("lbl_distance").innerHTML = "Distance: 2.1 KM";
+    document.getElementById("lbl_price").innerHTML = "Price: 20 DKK";
+    document.getElementById("btn_reserve").style.visibility = "visible";
+    var html = "<div><h3> FREE SPACES: " + free + "</h3><p>" + address + "<br></div><div><h3>TOTAL :" + url + "</h3></div>";
+    iw = new google.maps.InfoWindow({
+      content: html,
+      maxWidth: 300
+    });
+    iw.open(map, marker);
+  });
+}
+
+function createMarker(results) {
+  var marker = new google.maps.Marker({
+    icon: 'http://maps.google.com/mapfiles/ms/icons/blue.png',
+    map: map,
+    position: results[0].geometry.location,
+    title: title,
+    animation: google.maps.Animation.DROP,
+    address: address,
+    url: url
+  })
+  bounds.extend(marker.getPosition());
+  map.fitBounds(bounds);
+  infoWindow(marker, map, title, address, url);
+  return marker;
+}
+
+document.getElementById("btn_reserve").onclick = function () {
+        location.href = "../parking-aarhus/reserve.html";
+};
+
+}
+
+
+google.maps.event.addDomListener(window, "load", initialize);
+
+

@@ -1,0 +1,597 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.1.0.alpha.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 56, ../sass/screen.scss */
+#content {
+  float: left;
+  height: 70%;
+  width: 100%;
+}
+
+/* line 62, ../sass/screen.scss */
+#menu {
+  position: absolute;
+  float: left;
+  height: 70%;
+  width: 20%;
+  z-index: 0;
+}
+
+/* line 70, ../sass/screen.scss */
+#footer {
+  clear: left;
+  height: 15%;
+}
+
+/* line 75, ../sass/screen.scss */
+#header {
+  height: 10%;
+  z-index: 1;
+  border-radius: 8px;
+  background: #8CE168;
+}
+
+/* line 82, ../sass/screen.scss */
+body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+/* line 90, ../sass/screen.scss */
+body > div {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 3px solid #D8D8D8;
+  border-radius: 20px;
+  box-bozing: border-box;
+  padding: 10px;
+}
+
+/* line 101, ../sass/screen.scss */
+input {
+  background-color: white;
+  border: 2px solid red;
+  border-radius: 15px;
+  padding: 7px;
+}
+
+/* line 108, ../sass/screen.scss */
+input:hover {
+  background-color: #fafaf7;
+}
+
+/* line 113, ../sass/screen.scss */
+input[type='button'] {
+  margin: 0;
+  width: 125px;
+  height: 36px;
+  border: 1px solid #79A845;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: url(../images/gradients.png) 0 -226px repeat-x;
+  font-weight: bold;
+  color: #FFF;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  background-color: #8CE168;
+  background-image: linear-gradient(bottom, #8CE168 54%, #8CE168 86%);
+  background-image: -o-linear-gradient(bottom, #8CE168 54%, #8CE168 86%);
+  background-image: -moz-linear-gradient(bottom, #8CE168 54%, #8CE168 86%);
+  background-image: -webkit-linear-gradient(bottom, #8CE168 54%, #8CE168 86%);
+  background-image: -ms-linear-gradient(bottom, #8CE168 54%, #8CE168 86%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.54, #8CE168), color-stop(0.86, #8CE168));
+}
+/* line 35, ../sass/screen.scss */
+input[type='button']:hover {
+  background-color: #B5DC89;
+  background-image: linear-gradient(bottom, #B5DC89 54%, #B5DC89 86%);
+  background-image: -o-linear-gradient(bottom, #B5DC89 54%, #B5DC89 86%);
+  background-image: -moz-linear-gradient(bottom, #B5DC89 54%, #B5DC89 86%);
+  background-image: -webkit-linear-gradient(bottom, #B5DC89 54%, #B5DC89 86%);
+  background-image: -ms-linear-gradient(bottom, #B5DC89 54%, #B5DC89 86%);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.54, #B5DC89), color-stop(0.86, #B5DC89));
+}
+
+/* line 119, ../sass/screen.scss */
+input[type='search'] {
+  width: 45%;
+  height: 10%;
+  margin-left: 20%;
+  border: 1px solid #D4DADD;
+  padding: 10px;
+  background: url(../images/s.png) 95% no-repeat #FBFBFC;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 0 4px 2px 0 rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: inset 0 4px 2px 0 rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0 4px 2px 0 rgba(0, 0, 0, 0.03);
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+/* line 130, ../sass/screen.scss */
+input[type='search']:focus {
+  -webkit-box-shadow: inset 0 0 4px 2px #E7F0D8;
+  -moz-box-shadow: inset 0 0 4px 2px #E7F0D8;
+  box-shadow: inset 0 0 4px 2px #E7F0D8;
+}
+/* line 133, ../sass/screen.scss */
+input[type='search']::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* line 138, ../sass/screen.scss */
+.button-link {
+  padding: 10px 15px;
+  color: #000000;
+  text-decoration: blink;
+  font-size: 130%;
+  font-weight: bolder;
+}
+
+/* line 147, ../sass/screen.scss */
+#map {
+  width: 100%;
+  height: 400px;
+  margin-top: 5%;
+}
+
+/* line 152, ../sass/screen.scss */
+#bars {
+  width: 65%;
+  height: 40%;
+  top: 21%;
+  left: 20%;
+}
+
+/* line 158, ../sass/screen.scss */
+.details {
+  margin-top: 3%;
+  width: 100%;
+  display: inline-block;
+}
+
+/* line 164, ../sass/screen.scss */
+.panel {
+  position: absolute;
+  text-align: center;
+  margin-top: 2%;
+  display: inline-block;
+  background-color: white;
+  left: 2%;
+  width: 95%;
+  margin-bottom: 1%;
+  padding: 3%;
+  border: 1px solid #000000;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+/* line 178, ../sass/screen.scss */
+#panel_info {
+  top: 75%;
+  text-align: left;
+  height: 16%;
+}
+
+/* line 184, ../sass/screen.scss */
+#right {
+  position: absolute;
+  left: 60%;
+  top: 10%;
+}
+
+/* line 190, ../sass/screen.scss */
+#btn_details_reserve {
+  margin-bottom: 3%;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+}
+
+/* line 196, ../sass/screen.scss */
+#btn_reserve {
+  margin-bottom: 3%;
+}
+
+/* line 200, ../sass/screen.scss */
+#btn_update {
+  width: 100px;
+  margin: 0 auto;
+}
+
+/* line 204, ../sass/screen.scss */
+#lbl_free {
+  font-weight: bold;
+}
+
+/* line 207, ../sass/screen.scss */
+#lbl_hand {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+/* line 212, ../sass/screen.scss */
+#lbl_name, #lbl_price, #lbl_free, #lbl_total {
+  font-size: 95%;
+}
+
+/* line 215, ../sass/screen.scss */
+#info {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+}
+
+/* line 221, ../sass/screen.scss */
+#pie {
+  width: 50%;
+  left: 25%;
+  top: 10%;
+  height: 50%;
+  position: absolute;
+}
+
+/* line 228, ../sass/screen.scss */
+#reserve_info {
+  top: 67%;
+  height: 25%;
+}
+
+/* line 233, ../sass/screen.scss */
+#heading {
+  margin-top: 10%;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+/* line 239, ../sass/screen.scss */
+#chbox {
+  position: absolute;
+  left: -30%;
+}
+
+/* line 245, ../sass/screen.scss */
+input.cmn-toggle-round-flat + label {
+  padding: 2px;
+  width: 120px;
+  height: 60px;
+  background-color: #dddddd;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+
+/* line 253, ../sass/screen.scss */
+input.cmn-toggle-round-flat + label:before,
+input.cmn-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+/* line 259, ../sass/screen.scss */
+input.cmn-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: #fff;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+
+/* line 268, ../sass/screen.scss */
+input.cmn-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 52px;
+  background-color: #8CE168;
+  border-radius: 52px;
+  transition: margin 0.4s, background 0.4s;
+}
+
+/* line 277, ../sass/screen.scss */
+input.cmn-toggle-round-flat:checked + label {
+  background-color: #8ce196;
+}
+
+/* line 280, ../sass/screen.scss */
+input.cmn-toggle-round-flat:checked + label:after {
+  margin-left: 60px;
+  background-color: #8CE168;
+}
+
+/* line 285, ../sass/screen.scss */
+#toggle_panel {
+  margin-top: 80%;
+  left: 35%;
+  border: 1px;
+  text-align: center;
+  background: initial;
+  width: 33%;
+}
+
+/* line 293, ../sass/screen.scss */
+#lbl_switch {
+  position: absolute;
+  top: 58%;
+  left: 45%;
+}
+
+/* --------------------------------- NAVIGATION  ----------------------------------------------*/
+/* Navigation Menu - Background */
+/* line 300, ../sass/screen.scss */
+.navigation {
+  /* critical sizing and position styles */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  /* non-critical appearance styles */
+  list-style: none;
+  background: #D2D2D2;
+}
+
+/* Navigation Menu - List items */
+/* line 317, ../sass/screen.scss */
+.nav-item {
+  width: 200px;
+  border-top: 1px solid #7D7979;
+  border-bottom: 1px solid #7D7979;
+}
+
+/* line 323, ../sass/screen.scss */
+.nav-item a {
+  /* non-critical appearance styles */
+  display: block;
+  padding: 1em;
+  background: #8CE168;
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.2s, background 0.5s;
+}
+
+/* line 334, ../sass/screen.scss */
+.nav-item a:hover {
+  color: #fff;
+  background: #777777;
+}
+
+/* Site Wrapper - Everything that isn't navigation */
+/* line 340, ../sass/screen.scss */
+.site-wrap {
+  /* Critical position and size styles */
+  overflow-x: hidden;
+  min-height: 100%;
+  min-width: 100%;
+  background-color: white;
+  /* Needs a background or else the nav will show through */
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+  /* non-critical apperance styles */
+  background-image: linear-gradient(135deg, #FFFFFF 0%, #D1D1D1 35%, #FFFFFF 100%);
+  background-size: 200%;
+}
+
+/* Nav Trigger */
+/* line 358, ../sass/screen.scss */
+.nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* line 364, ../sass/screen.scss */
+label[for="nav-trigger"] {
+  /* critical positioning styles */
+  position: fixed;
+  left: 24px;
+  top: 17px;
+  z-index: 2;
+  /* non-critical apperance styles */
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  background-size: contain;
+}
+
+/* Make the Magic Happen */
+/* line 379, ../sass/screen.scss */
+.nav-trigger + label, .site-wrap {
+  transition: left 0.2s;
+}
+
+/* line 383, ../sass/screen.scss */
+.nav-trigger:checked + label {
+  left: 215px;
+}
+
+/* line 387, ../sass/screen.scss */
+.nav-trigger:checked ~ .site-wrap {
+  left: 200px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* line 392, ../sass/screen.scss */
+body {
+  /* Without this, the body has excess horizontal scroll when the menu is open */
+  overflow-x: hidden;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* Additional non-critical styles */
+/* line 400, ../sass/screen.scss */
+h1, h3, p {
+  max-width: 600px;
+  margin: 0 auto 1em;
+}
+
+/* line 405, ../sass/screen.scss */
+code {
+  padding: 2px;
+  background: #ddd;
+}
+
+/* line 410, ../sass/screen.scss */
+img.inline {
+  display: inline;
+  border: none;
+  box-shadow: none;
+  padding: 0px 0px;
+  margin: -10%;
+  margin-right: 5%;
+}
+
+/* Micro reset */
+/* line 419, ../sass/screen.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 420, ../sass/screen.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* --------------------------------- END NAVIGATION  ----------------------------------------------*/
+/* line 423, ../sass/screen.scss */
+#naptha_container0932014_0707 {
+  display: none;
+}
+
+/* line 427, ../sass/screen.scss */
+.list_panel {
+  position: relative;
+  width: 100%;
+  margin-top: 3%;
+  display: inline-block;
+  background-color: white;
+  left: 2%;
+  width: 95%;
+  margin-bottom: 1%;
+  padding: 3%;
+  border: 1px solid #000000;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+/* line 446, ../sass/screen.scss */
+canvas {
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  position: absolute;
+  right: -25%;
+}
+
+/* line 454, ../sass/screen.scss */
+#bold {
+  font-weight: bolder;
+}
